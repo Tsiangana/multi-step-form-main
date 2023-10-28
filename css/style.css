@@ -1,0 +1,243 @@
+
+@import url('https://fonts.googleapis.com/css2?family=FAMILY_NAME:wght@WEIGHT_OR_RANGE&display=swap');
+
+:root{
+    --Marine_blue: hsl(213, 96%, 18%);
+    --Purplish_blue: hsl(243, 100%, 62%);
+    --Pastel_blue: hsl(228, 100%, 84%);
+    --Light_blue: hsl(206, 94%, 87%);
+    --Strawberry_red: hsl(354, 84%, 57%);
+
+    --Cool_gray: hsl(231, 11%, 63%);
+    --Light_gray: hsl(229, 24%, 87%);
+    --Magnolia: hsl(217, 100%, 97%);
+    --Alabaster: hsl(231, 100%, 99%);
+    --White: hsl(0, 0%, 100%);
+
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    --font_family: Ubuntu;
+
+    --border: 1px solid #000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: var(--Magnolia);
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    width: 60%;
+    height: 500px;
+    background-color: var(--White);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    padding: 15px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+@media (max-width: 450px) {
+    .content{
+        width: 90%;
+    }
+}
+
+.sub-content-1{
+    width: 320px;
+    height: 100%;
+    background-color: var(--Purplish_blue);
+    margin-right: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+@media (max-width: 850px) {
+    .sub-content-1{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 150px;
+        z-index: -10;
+        border-radius: 0;
+    } 
+}
+
+.sub-content-2{
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-info{
+    width: 200px;
+    height: 350px;
+    position: absolute;
+}
+
+.sidebar-svg svg{
+    width: 274px;
+    height: 568px;
+    margin-top: -60px;
+}
+
+.sub-sidebar{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    padding: 30px;
+    margin-bottom: -5px;
+}
+
+.sub-sidebar .circle{
+    width: 25px;
+    height: 25px;
+    color: var(--Alabaster);
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-size: 11px;
+}
+
+.sub-sidebar .paragrath h3{
+    font-size: 10px;
+    font-family: sans-serif;
+    font-weight: 650;
+    color: var(--Cool_gray);
+}
+.sub-sidebar .paragrath h2{
+    font-size: 11px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: var(--Alabaster);
+}
+
+@media (max-width: 850px) {
+    .sidebar-info{
+        position: absolute;
+        width: 100%;
+        height: 150px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 20;
+    }
+    .sub-sidebar .paragrath{
+        display: none;
+    }
+    .sub-sidebar{
+        width: 50px;
+        height: 40px;
+        display: flex;
+        padding: 0;
+        margin-bottom: 0;
+        margin-top: -50px;
+    }
+    .sidebar-svg svg{
+        position: absolute;
+        top: -1200px;
+        left: -500px;
+        width: 1850px;
+        height: 1768px;
+    } 
+}
+
+.div-container{
+    width: 80%;
+    height: 90%;
+}
+
+#two{
+    display: none;
+}
+#three{
+    display: none;
+}
+#four{
+    display: none;
+}
+#five{
+    display: none;
+}
+
+.sub-content-2 #one h1{
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--Marine_blue);
+}
+
+.sub-content-2 #one h3{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--Cool_gray);
+    margin-top: 8px;
+    margin-bottom: 35px;
+}
+
+.sub-content-2 #one label{
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--Marine_blue);
+}
+.sub-content-2 #one br{
+    margin-bottom: 5px;
+}
+.sub-content-2 #one input{
+    border: solid 1.5px #9e9e9e;
+    width: 75%;
+    height: 25px;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.sub-content-2 #one button{
+    width: 110px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--White);
+    background-color: var(--Marine_blue);
+    border: none;
+    box-shadow: var(--box-shadow);
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-left: 65%;
+}
+
+@media (max-width: 850px){
+    .sub-content-2 #one input{
+        width: 100%;
+    }
+}
+
+@media (max-width: 550px){
+    .sub-content-2 #one button{
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
+    .content{
+        height: 400px;
+    }
+}
