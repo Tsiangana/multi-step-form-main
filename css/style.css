@@ -116,6 +116,7 @@ body{
     justify-content: center;
     margin-right: 10px;
     font-size: 11px;
+    cursor: pointer;
 }
 
 .sub-sidebar .paragrath h3{
@@ -167,8 +168,11 @@ body{
     height: 90%;
 }
 
-#two{
+#one{
     display: none;
+}
+#two{
+    display: block;
 }
 #three{
     display: none;
@@ -180,13 +184,13 @@ body{
     display: none;
 }
 
-.sub-content-2 #one h1{
+.sub-content-2 .div-container h1{
     font-size: 25px;
     font-weight: 700;
     color: var(--Marine_blue);
 }
 
-.sub-content-2 #one h3{
+.sub-content-2 .div-container h3{
     font-size: 14px;
     font-weight: 500;
     color: var(--Cool_gray);
@@ -211,7 +215,7 @@ body{
     margin-bottom: 10px;
 }
 
-.sub-content-2 #one button{
+.sub-content-2 .div-container button{
     width: 110px;
     height: 40px;
     font-size: 14px;
@@ -223,6 +227,7 @@ body{
     border-radius: 5px;
     margin-top: 50px;
     margin-left: 65%;
+    cursor: pointer;
 }
 
 @media (max-width: 850px){
@@ -232,7 +237,7 @@ body{
 }
 
 @media (max-width: 550px){
-    .sub-content-2 #one button{
+    .sub-content-2 .div-container button{
         position: absolute;
         bottom: 20px;
         right: 20px;
@@ -241,3 +246,76 @@ body{
         height: 400px;
     }
 }
+
+.radio-inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .radio-inputs > * {
+    margin: 6px;
+  }
+  
+  .radio-input:checked + .radio-tile .radio-label {
+    color: #2260ff;
+  }
+  
+  .radio-input:focus + .radio-tile {
+    border-color: #2260ff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px #b5c9fc;
+  }
+  
+  .radio-input:focus + .radio-tile:before {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  .radio-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    width: 115px;
+    min-height: 130px;
+    border-radius: 0.5rem;
+    border: 2px solid #b5bfd9;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.15s ease;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  
+  .radio-tile:hover {
+    border-color: #2260ff;
+  }
+  
+  .radio-tile:hover:before {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  .radio-label {
+    color: #707070;
+    transition: 0.375s ease;
+    text-align: center;
+    font-size: 13px;
+  }
+  
+  .radio-input {
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }

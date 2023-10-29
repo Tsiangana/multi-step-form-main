@@ -55,20 +55,61 @@
         <div class="div-container" id="one">
           <h1>Personal info</h1>
           <h3>please provide your name, email address, and phone number.</h3>
-          <form action="POST">
+          <form action="">
             <label for="">Name</label><br>
-            <input type="text" placeholder="e.g. Stephen King"><br>
+            <input type="text" placeholder="e.g. Stephen King" required><br>
             <label for="">Email Address</label><br>
             <input type="email" placeholder=" e.g. stephenking@lorem.com" required><br>
             <label for="">Phone Number</label><br>
             <input type="text" placeholder="e.g. +1 234 567 890" required><br>
-            <button>Next Step</button>
+            <button id="nextButton">Next Step</button>
           </form>
         </div>
-        <div class="div-container" id="two"></div>
-        <div class="div-container" id="three"></div>
-        <div class="div-container" id="four"></div>
-        <div class="div-container" id="five"></div>
+        <div class="div-container" id="two">
+          <h1>Select your plan</h1>
+          <h3>You have the option of mohtly or yearly billing</h3>
+                      <!-- inicio das check boxs -->
+          <div class="radio-inputs">
+  
+            <label>
+              <input class="radio-input" type="radio" name="engine">
+                <span class="radio-tile">
+                  <span class="radio-icon">
+                    <img src="assets/images/icon-arcade.svg">
+                  </span>
+                  <span class="radio-label">Arcade</span>
+                </span>
+            </label>
+          
+            <label>
+              <input checked="" class="radio-input" type="radio" name="engine">
+              <span class="radio-tile">
+                <span class="radio-icon">
+                   <img src="assets/images/icon-advanced.svg" alt="">
+                </span>
+                <span class="radio-label">Advanced</span>
+              </span>
+            </label>
+          
+            <label>
+              <input class="radio-input" type="radio" name="engine">
+              <span class="radio-tile">
+                <span class="radio-icon">
+                  <img src="assets/images/icon-pro.svg" alt="">
+                </span>
+                <span class="radio-label">Pro</span>
+              </span>
+            </label>
+          
+        </div>
+                      <!-- fim das chek boxs -->
+
+          <button id="">Next Step</button>
+
+        </div>
+        <div class="div-container" id="three">2</div>
+        <div class="div-container" id="four">3</div>
+        <div class="div-container" id="five">4</div>
       </div>
     </div>
   </div>
