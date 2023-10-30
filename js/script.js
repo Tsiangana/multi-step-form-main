@@ -22,3 +22,24 @@ document.getElementById("nextButton").addEventListener("click", function() {
         nextDiv.style.display = "block";
     }
 });
+
+
+    let year = document.getElementById('year');
+    let month = document.getElementById('moth');
+
+    let year1 = document.getElementById('year1');
+    let month1 = document.getElementById('moth1');
+
+    let year2 = document.getElementById('year2');
+    let month2 = document.getElementById('moth2');
+
+    document.getElementById("toggle").addEventListener("click", function() {
+
+        month.style.display = "none";
+        month1.style.display = "none";
+        month2.style.display = "none";
+
+        year.style.display = "block";
+        year1.style.display = "block";
+        year2.style.display = "block";
+    })

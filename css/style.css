@@ -263,12 +263,16 @@ body{
   }
   
   .radio-input:checked + .radio-tile .radio-label {
-    color: #2260ff;
+    color: var(--Marine_blue);
+    border-color: var(--Marine_blue);
+  }
+  .radio-input:checked{
+    border-color: var(--Marine_blue);
   }
   
   .radio-input:focus + .radio-tile {
-    border-color: #2260ff;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px #b5c9fc;
+    border-color: var(--Marine_blue);
+    /*box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px #b5c9fc;*/
   }
   
   .radio-input:focus + .radio-tile:before {
@@ -284,9 +288,9 @@ body{
     width: 115px;
     min-height: 130px;
     border-radius: 0.5rem;
-    border: 2px solid #b5bfd9;
+    border: 1px solid hsla(233, 9%, 65%, 0.651);
     background-color: #fff;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    /*box-shadow: var(--box-shadow);*/
     transition: 0.15s ease;
     cursor: pointer;
     position: relative;
@@ -294,7 +298,7 @@ body{
   
   
   .radio-tile:hover {
-    border-color: #2260ff;
+    border-color: var(--Marine_blue);
   }
   
   .radio-tile:hover:before {
@@ -303,10 +307,23 @@ body{
   }
   
   .radio-label {
-    color: #707070;
+    color: var(--Marine_blue);
+    font-weight: 600;
     transition: 0.375s ease;
     text-align: center;
     font-size: 13px;
+    position: absolute;
+    top: 85px;
+    left: 10px;
+  }
+
+  .radio-inputs h3{
+    position: absolute;
+    top: 95px;
+    left: 10px;
+  }
+  .radio-inputs .moht{
+    font-size: 10px;
   }
   
   .radio-input {
@@ -318,4 +335,104 @@ body{
     position: absolute;
     white-space: nowrap;
     width: 1px;
+  }
+
+  .radio-inputs img{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+  }
+
+  .toggle{
+    width: 100%;
+    height: 35px;
+    background-color: var(--Magnolia);
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 3px;
+    margin-bottom: 35px;
+  }
+  .toggle .tipe{
+    color: var(--Marine_blue);
+    font-weight: 600;
+    font-size: 12px;
+    padding: 0 15px;
+  }
+
+  /* The switch - the box around the slider */
+.switch {
+    font-size: 9px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2.1em;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--Marine_blue);
+    border: 1px solid hsl(213, 96%, 18%);
+    transition: .4s;
+    border-radius: 30px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 20px;
+    left: 0.27em;
+    bottom: 0.25em;
+    background-color: #fff;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--Marine_blue);
+    border: 1px solid hsl(213, 96%, 18%);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px hsl(213, 96%, 18%);
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(1.4em);
+    background-color: #fff;
+  }
+
+  #year{
+    display: none;
+  }
+  #year1{
+    display: none;
+  }
+  #year2{
+    display: none;
+  }
+
+  .back{
+    font-size: 12px;
+    color: var(--Cool_gray);
+    font-weight: 500;
+    position: absolute;
+    top: 77%;
+    cursor: pointer;
   }
