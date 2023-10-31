@@ -172,10 +172,10 @@ body{
     display: none;
 }
 #two{
-    display: block;
+    display: none;
 }
 #three{
-    display: none;
+    display: block;
 }
 #four{
     display: none;
@@ -246,6 +246,8 @@ body{
         height: 400px;
     }
 }
+
+                    /* Inicio da segunda div */
 
 .radio-inputs {
     display: flex;
@@ -436,3 +438,167 @@ body{
     top: 77%;
     cursor: pointer;
   }
+
+  @media (max-width: 1030px){
+    .radio-tile {
+      width: 90px;
+      min-height: 105px;
+    }
+    .radio-label {
+      font-size: 11px;
+      top: 75px;
+    }
+    .radio-inputs h3{
+      top: 77px;
+      font-size: 10px;
+    }
+  }
+
+  @media (max-width: 850px){
+    .radio-inputs {
+    display: block;
+  }
+  .radio-tile {
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+  }
+  .radio-label {
+    position: absolute;
+    top: 12px;
+    left: 50px;
+  }
+  .radio-inputs h3{
+    top: 16px;
+    left: 50px;
+  }
+}
+
+@media (max-width: 550px){
+  .radio-inputs {
+    margin-top: -30px;
+  }
+  .radio-tile {
+    margin-top: -10px;
+  }
+  .back{
+    top: 95%;
+    left: 50px;
+  }
+}
+
+                        /* Inicio da terceira div */
+
+  #three .radio-inputs {
+    display: block;
+}
+
+  #three .radio-tile {
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+}
+
+  #three .radio-label {
+    position: absolute;
+    top: 12px;
+    left: 50px;
+    font-size: 13px;
+}
+
+  #three .radio-inputs h3{
+    top: 17px;
+    left: 50px;
+}
+
+/* inicio de checkboxs */
+
+  .cbx {
+  -webkit-perspective: 20;
+  perspective: 20;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border: 2px solid #e8e8eb;
+  background: #e8e8eb;
+  border-radius: 4px;
+  transform: translate3d(0, 0, 0);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  }
+  
+  .cbx:hover {
+    border-color: #0b76ef;
+  }
+  
+  .flip {
+    display: block;
+    transition: all 0.4s ease;
+    transform-style: preserve-3d;
+    position: relative;
+    width: 20px;
+    height: 20px;
+  }
+  
+  #cbx {
+    display: none;
+  }
+  
+  #cbx:checked + .cbx {
+    border-color: #0b76ef;
+  }
+  
+  #cbx:checked + .flip {
+    transform: rotateY(180deg);
+  }
+  
+  .front,
+  .return {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+  }
+  
+  .front {
+    background: #fff;
+    z-index: 1;
+  }
+  
+  .return {
+    transform: rotateY(180deg);
+    background: #0b76ef;
+    text-align: center;
+    color: #fff;
+    line-height: 20px;
+    box-shadow: 0 0 0 1px #0b76ef;
+  }
+  
+  .return svg {
+    margin-top: 3px;
+    fill: none;
+  }
+  
+  .return svg path {
+    stroke: #fff;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  #price-sub-final{
+    position: absolute;
+    top: 20px;
+    left: 80%;
+    z-index: 10;
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: 650;
+    color: var(--Purplish_blue);
+  }
+  
+  
+  
