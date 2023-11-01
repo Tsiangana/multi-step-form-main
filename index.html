@@ -19,28 +19,28 @@
       <div class="sub-content-1">
         <div class="sidebar-info">
           <div class="sub-sidebar">
-            <div class="circle">1</div>
+            <div class="circle" id="circle1">1</div>
             <div class="paragrath">
               <h3>STEP 1</h3>
               <h2>YOUR INFO</h2>
             </div>
           </div>
           <div class="sub-sidebar">
-            <div class="circle">2</div>
+            <div class="circle" id="circle2">2</div>
             <div class="paragrath">
               <h3>STEP 2</h3>
               <h2>SELECT PLAN</h2>
             </div>
           </div>
           <div class="sub-sidebar">
-            <div class="circle">3</div>
+            <div class="circle" id="circle3">3</div>
             <div class="paragrath">
               <h3>STEP 3</h3>
               <h2>ADD-ONS</h2>
             </div>
           </div>
           <div class="sub-sidebar">
-            <div class="circle">4</div>
+            <div class="circle" id="circle4">4</div>
             <div class="paragrath">
               <h3>STEP 4</h3>
               <h2>SUMMARY</h2>
@@ -55,14 +55,14 @@
         <div class="div-container" id="one">
           <h1>Personal info</h1>
           <h3>please provide your name, email address, and phone number.</h3>
-          <form action="">
+          <form>
             <label for="">Name</label><br>
             <input type="text" placeholder="e.g. Stephen King" required><br>
-            <label for="">Email Address</label><br>
+            <label for="">Email Address</label><label class="required" id="required">required</label><br>
             <input type="email" placeholder=" e.g. stephenking@lorem.com" required><br>
-            <label for="">Phone Number</label><br>
+            <label for="">Phone Number</label><label class="required" id="required1">required</label><br>
             <input type="text" placeholder="e.g. +1 234 567 890" required><br>
-            <button id="nextButton">Next Step</button>
+            <button id="nextButton" type="button">Next Step</button>
           </form>
         </div>
         <div class="div-container" id="two">
@@ -121,14 +121,14 @@
             <span class="tipe">Yearly</span>
           </div>
 
-          <span class="back">Go Back</span>
-          <button id="">Next Step</button>
+          <span class="back" id="voltar1">Go Back</span>
+          <button id="next1">Next Step</button>
 
         </div>
         <div class="div-container" id="three">
           <h1>Pick add-ons</h1>
           <h3>Add-ons help enhance your gamming experiencie</h3>
-                      <!-- inicio das check boxs -->
+                      <!-- inicio das check radio boxs -->
           <div class="radio-inputs">
   
             <label>
@@ -156,12 +156,12 @@
             </label>
           
             <label>
-              <input checked="" class="radio-input" type="radio" name="engine">
+              <input checked="" class="radio-input" type="radio" name="engine1">
               <span class="radio-tile">
                 <span class="radio-icon">
-                  <label for="cbx" class="cbx">
+                  <label for="cbx1" class="cbx">
                       <div class="checkmark">
-                      <input checked="" type="checkbox" id="cbx">
+                      <input checked="" type="checkbox" id="cbx1">
                       <div class="flip">
                         <div class="front"></div>
                           <div class="return">
@@ -173,20 +173,20 @@
                       </div>
                     </label>
                 </span>
-                <span class="radio-label">Advanced</span>
-                <h3 class="moht" id="moth1">$12/mo</h3>
-                <h2 id="price-sub-final">+$1/mo</h2>
+                <span class="radio-label">Larger storage</span>
+                <h3 class="moht" id="moth1">Extra 1TB of cloud save</h3>
+                <h2 id="price-sub-final">+$2/mo</h2>
 
               </span>
             </label>
           
             <label>
-              <input class="radio-input" type="radio" name="engine">
+              <input class="radio-input" type="radio" name="engine2">
               <span class="radio-tile">
                 <span class="radio-icon">
-                  <label for="cbx" class="cbx">
+                  <label for="cbx2" class="cbx">
                       <div class="checkmark">
-                      <input checked="" type="checkbox" id="cbx">
+                      <input checked="" type="checkbox" id="cbx2">
                       <div class="flip">
                         <div class="front"></div>
                           <div class="return">
@@ -198,9 +198,9 @@
                       </div>
                     </label>
                 </span>
-                <span class="radio-label">Pro</span>
-                <h3 class="moht" id="moth2">$15/mo</h3>
-                <h2 id="price-sub-final">+$1/mo</h2>
+                <span class="radio-label">Customizable profile</span>
+                <h3 class="moht" id="moth2">Custom theme on your profile</h3>
+                <h2 id="price-sub-final">+$2/mo</h2>
 
               </span>
             </label>
@@ -208,12 +208,57 @@
         </div>
                       <!-- fim das chek boxs -->
 
-          <span class="back">Go Back</span>
-          <button id="">Next Step</button>
+          <span class="back" id="voltar2">Go Back</span>
+          <button id="next2">Next Step</button>
 
         </div>
-        <div class="div-container" id="four">3</div>
-        <div class="div-container" id="five">4</div>
+        <div class="div-container" id="four">
+        
+            <h1>Finishing up</h1>
+            <h3>Double-check everythings looks OK before confirming</h3>
+                      
+            <div class="toggle">
+              <div class="content-toggle">
+                <div class="sub-content-toggle">
+                  <h2>Arcade (Monthly)</h2>
+                  <h3>Change</h3>
+                </div>
+                <div class="sub-content-toggle span">
+                  <span>$9/mo</span>
+                </div>
+              </div>
+              <div class="content-toggle">
+                <div class="sub-content-toggle">
+                  <h3>Onkine service</h3>
+                  <h3>Larger storage</h3>
+                </div>
+                <div class="sub-content-toggle span">
+                  <div class="sub-content-toggle-span">
+                    <span>+$1/mo</span>
+                    <span>+$2/mo</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sub-container-four">
+              <div><span>Total (per moth)</span></div>
+              <div class="title"><h1>+$12/mo</h1></div>
+            </div>
+  
+            <span class="back" id="voltar3">Go Back</span>
+            <button id="next3">Confirm</button>
+          </div>
+        <div class="div-container" id="five">
+          <div class="sub-five">
+            <div class="container-final">
+              <img src="assets/images/icon-thank-you.svg" alt="thank you">
+              <h1>Thank you!</h1>
+              <h3>Thanks for confirming your subscription! We hope you have fun 
+                using our platform. If you ever need support, please feel free 
+                to email us at support@loremgaming.com.</h3>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
